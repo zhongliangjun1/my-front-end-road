@@ -1,0 +1,22 @@
+body {
+    margin: 0px;
+}
+
+#main-page {
+	width: 400px;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+#my-input {
+	margin-top: 20px;
+	margin-bottom: 20px;
+}
+
+#my-filter {
+	margin-bottom: 20px;
+}
+
+#clear-btn {
+	float: right;
+}

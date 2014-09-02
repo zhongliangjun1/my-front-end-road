@@ -1,0 +1,38 @@
+<html>
+	<head>
+		<!-- <link rel="stylesheet" href="stylesheets/bootstrap.min.css"> -->
+		<link rel="stylesheet" href="stylesheets/style.css">
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+	</head>
+	<body ng-app >
+	<div id="main-page" ng-controller="myCtrl" >
+		<div id="my-input" class="input-group">
+	      <input type="text" class="form-control">
+	      <span class="input-group-btn">
+	        <button class="btn btn-default" type="button">Add</button>
+	      </span>
+	    </div>
+
+	    <div id="my-filter" class="input-group">
+	      <input type="text" class="form-control">
+	      <span class="input-group-btn">
+	        <button class="btn btn-default" type="button">Filter</button>
+	      </span>
+	    </div>
+		
+		<div class="list-group">
+		  <!-- <a href="#" class="list-group-item disabled">tom</a> -->
+		  <a href="javascript:void(0);" class="list-group-item" ng-repeat="person in persons" >{{person.name}}</a>
+		</div>
+
+		<button id="clear-btn" type="button" class="btn btn-default">clear</button>
+	</div>
+
+		
+
+		<script src="javascripts/jquery.min.js"></script>
+    	<script src="javascripts/bootstrap.min.js"></script>
+    	<script src="javascripts/angular.js"></script>
+    	<script src="javascripts/controller.js"></script>
+	</body>
+</html>
