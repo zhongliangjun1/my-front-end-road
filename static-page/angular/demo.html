@@ -7,25 +7,22 @@
 	<body ng-app >
 	<div id="main-page" ng-controller="myCtrl" >
 		<div id="my-input" class="input-group">
-	      <input type="text" class="form-control">
+	      <input type="text" class="form-control" ng-model="candidate" >
 	      <span class="input-group-btn">
-	        <button class="btn btn-default" type="button">Add</button>
+	        <button class="btn btn-default" type="button" ng-click="addPerson()"  >Add</button>
 	      </span>
 	    </div>
 
-	    <div id="my-filter" class="input-group">
-	      <input type="text" class="form-control">
-	      <span class="input-group-btn">
-	        <button class="btn btn-default" type="button">Filter</button>
-	      </span>
+	    <div id="my-filter" >
+	      <input type="text" class="form-control" placeholder='query name' ng-model="condition" ng-change="query(condition)" >
 	    </div>
 		
 		<div class="list-group">
 		  <!-- <a href="#" class="list-group-item disabled">tom</a> -->
-		  <a href="javascript:void(0);" class="list-group-item" ng-repeat="person in persons" >{{person.name}}</a>
+		  <a href="javascript:void(0);" class="list-group-item {{person.capacity}}" ng-repeat="person in persons" >{{person.name}}</a>
 		</div>
 
-		<button id="clear-btn" type="button" class="btn btn-default">clear</button>
+		<button id="clear-btn" type="button" class="btn btn-default" ng-click="removeDisabledPeople()" >clear</button>
 	</div>
 
 		
