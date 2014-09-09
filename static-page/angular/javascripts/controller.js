@@ -19,7 +19,7 @@ var myCtrl = function($scope) {
 				'name':$scope.candidate,
 				'sex':'male'
 			}
-			$scope.personsRepo.push(newPerson);
+			personsRepo.push(newPerson);
 			$scope.persons = personsRepo;
 			$scope.candidate = '';
 		};
@@ -28,8 +28,8 @@ var myCtrl = function($scope) {
 	$scope.query = function(condition) {
 		if ( condition ) {
 			var retainPeople = [];
-			for (var i = 0; i < $scope.persons.length; i++) {
-				var person = $scope.persons[i];	
+			for (var i = 0; i < personsRepo.length; i++) {
+				var person = personsRepo[i];	
 				if ( person.name.indexOf(condition)!=-1 ) {
 					retainPeople.push(person);
 				};
@@ -51,6 +51,19 @@ var myCtrl = function($scope) {
 		personsRepo = abledPeople;
 		$scope.persons = personsRepo;
 	}
+
+	$scope.affect = 'hide';
+	$scope.shouldShowPersons = true;
+	$scope.hideorshow = function() {
+		if ($scope.affect=='hide') {
+			$scope.affect = 'show';
+			$scope.shouldShowPersons = false;
+		} else {
+			$scope.affect='hide';
+			$scope.shouldShowPersons = true;
+		}
+	}
+
 
 
 }

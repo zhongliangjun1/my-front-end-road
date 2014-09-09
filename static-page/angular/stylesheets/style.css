@@ -18,5 +18,12 @@ body {
 }
 
 #clear-btn {
+	width: 70px;
+	float: right;
+}
+
+#hide-btn {
+	width: 70px;
+	margin-right: 10px;
 	float: right;
 }
