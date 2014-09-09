@@ -1,0 +1,39 @@
+<html>
+	<head>
+		<link rel="stylesheet" href="stylesheets/bootstrap.min.css">
+		<link rel="stylesheet" href="stylesheets/style.css">
+	</head>
+	<body ng-app="myApp" >
+
+	<div id="main-page" >
+
+		<div id="my-input" class="input-group" ng-controller="addCtrl" >
+	      <input type="text" class="form-control" ng-model="candidate" >
+	      <span class="input-group-btn">
+	        <button class="btn btn-default" type="button" ng-click="addPerson()">Add</button>
+	      </span>
+	    </div>
+
+	    <div class="list-group" ng-controller="showCtrl" >
+		  <!-- <a href="#" class="list-group-item disabled">tom</a> -->
+		  <a href="javascript:void(0);" class="list-group-item {{person.capacity}}" ng-repeat="person in persons" >{{person.name}}</a>
+		</div>
+
+	    <!-- <div id="my-filter" >
+	      <input type="text" class="form-control" placeholder='query name' ng-model="condition" ng-change="query(condition)" >
+	    </div> -->
+		
+		
+
+		<!-- <button id="clear-btn" type="button" class="btn btn-default" ng-click="removeDisabledPeople()" >clear</button>
+		<button id="hide-btn" type="button" class="btn btn-default" ng-click="hideorshow()" ng-model="affect" >{{affect}}</button> -->
+	</div>
+
+		
+
+		<script src="javascripts/jquery.min.js"></script>
+    	<script src="javascripts/bootstrap.min.js"></script>
+    	<script src="javascripts/angular.js"></script>
+    	<script src="javascripts/scope.js"></script>
+	</body>
+</html>
