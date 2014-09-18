@@ -1,0 +1,21 @@
+{
+  "name": "bowertest",
+  "version": "0.0.0",
+  "homepage": "https://github.com/zhongliangjun1/my-front-end-road",
+  "authors": [
+    "liangjun.zhong <zhongliangjun1@gmail.com>"
+  ],
+  "description": "have a try of bower",
+  "main": "bowertest.html",
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "bootstrap": "~3.2.0"
+  }
+}
