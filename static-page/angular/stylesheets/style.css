@@ -7,23 +7,58 @@ body {
 	margin-left: auto;
 	margin-right: auto;
 }
-
 #my-input {
 	margin-top: 20px;
 	margin-bottom: 20px;
 }
-
 #my-filter {
 	margin-bottom: 20px;
 }
-
 #clear-btn {
 	width: 70px;
 	float: right;
 }
-
 #hide-btn {
 	width: 70px;
 	margin-right: 10px;
 	float: right;
+}
+#filters-page {
+	width: 1200px;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.function-block {
+	float: left;
+	width: 350px;
+	height: 380px;
+	margin: 10px;
+}
+
+
+.bs-callout {
+	padding: 20px;
+	border: 1px solid #eee;
+	border-left-width: 5px;
+	border-radius: 3px;
+}
+.bs-callout-blue {
+	border-left-color: #5bc0de;
+}
+.bs-callout-title-blue {
+	color: #5bc0de;
+}
+.bs-callout-orange {
+	border-left-color: #f0ad4e;
+}
+.bs-callout-title-orange {
+	color: #f0ad4e;
+}
+
+.item {
+	padding: 5px 0px 5px 0px;
+}
+.sex-item {
+	padding: 5px 0px 0px 0px;
 }

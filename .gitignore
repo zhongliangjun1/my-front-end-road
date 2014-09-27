@@ -19,4 +19,4 @@ maven-ant-tasks.jar
 test-output
 classes
 node_modules
-bowertest/bower_components
+bower_components

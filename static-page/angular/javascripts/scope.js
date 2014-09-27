@@ -22,7 +22,8 @@ angular.module('myApp', [])
 				'name':$scope.candidate,
 				'sex':'male'
 			}
-			$scope.$parent.people.push(newPerson);
+			//$scope.$parent.people.push(newPerson);
+			$scope.people.push(newPerson);
 			$scope.candidate = '';
 		};
 	}
