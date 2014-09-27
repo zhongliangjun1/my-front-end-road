@@ -1,0 +1,51 @@
+<html>
+	<head>
+		<link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.css">
+		<link rel="stylesheet" href="stylesheets/style.css">
+	</head>
+	<body ng-app="myApp" >
+
+	<div id="filters-page" ng-controller="personCtrl" >
+
+		<div class="bs-callout bs-callout-blue function-block">
+			<h4 class="bs-callout-title-blue">query by name of default filter</h4>
+			<div class="input-group item" >
+		      <input type="text" class="form-control" ng-model="nameQuery" placeholder="filter by name" >	      
+		    </div>	    
+		    <div class="list-group item" >
+			  <a href="javascript:void(0);" class="list-group-item" ng-repeat="person in persons | filter:{ 'name':nameQuery}" >
+			  	{{person.name}}
+			  </a>
+			</div>
+		</div>
+
+		<div class="bs-callout bs-callout-orange function-block">
+			<h4 class="bs-callout-title-orange">query by sex of self filter</h4>
+			<div class="btn-group sex-item">
+				<button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">
+				    {{sexQuery}} <span class="caret"></span>
+				</button>
+				<ul class="dropdown-menu" role="menu" >
+				    <li><a href="#" ng-repeat='sex in sexOptions' ng-click="sexSelector(sex)">{{sex}}</a></li>
+				</ul>			  
+			</div>
+			<div class="list-group item" >
+			  <a href="javascript:void(0);" class="list-group-item" ng-repeat="person in persons | sexFilter:sexQuery" >
+			  	{{person.name}}
+			  </a>
+			</div>
+		</div>
+		
+
+		
+
+	</div>
+
+		
+
+		<script src="bower_components/jquery/dist/jquery.js"></script>
+		<script src="bower_components/bootstrap/dist/js/bootstrap.js"></script>
+    	<script src="bower_components/angularjs/angular.js"></script>
+    	<script src="javascripts/filters.js"></script>
+	</body>
+</html>
