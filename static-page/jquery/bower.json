@@ -1,0 +1,23 @@
+{
+  "name": "jquery",
+  "version": "0.0.0",
+  "homepage": "https://github.com/zhongliangjun1/my-front-end-road",
+  "authors": [
+    "liangjun.zhong <zhongliangjun1@gmail.com>"
+  ],
+  "description": "jquery demo",
+  "keywords": [
+    "jquery"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "underscore": "~1.7.0"
+  }
+}
