@@ -1,7 +1,0 @@
-[
-		{ name:'tom', sex:'male', capacity:'abled' },
-		{ name:'jack', sex:'male', capacity:'disabled' },
-		{ name:'helen', sex:'male', capacity:'disabled' },
-		{ name:'jessey', sex:'male', capacity:'abled' },
-		{ name:'kitty', sex:'female', capacity:'abled' }
-]
