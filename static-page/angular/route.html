@@ -1,10 +1,37 @@
 <html>
 	<head>
-		
+		<title>single-page-apps-with-angularjs-routing-and-templating</title>
+		<link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.css">
+		<link rel="stylesheet" href="stylesheets/style.css">
+		<link rel="stylesheet" href="stylesheets/route.css">
 	</head>
 
-	<body>
-		
+	<body ng-app="routeApp">
+
+		<div id="route-page" >
+
+			<!-- <ul class="nav nav-tabs" role="tablist">
+		      <li class="active"><a href="#">Home</a></li>
+		      <li><a href="#">Profile</a></li>
+		      <li><a href="#">Messages</a></li>
+		    </ul> -->
+			<ul class="nav nav-tabs" role="tablist">
+				<li ng-repeat="tab in navTabs" class="{{tab.isActive}}" >
+					<a href="#{{tab.route}}">{{tab.title}}</a>
+				</li>
+			</ul>
+
+			<!-- angular templating -->
+			<!-- this is where content will be injected -->
+			<div id="container" ng-view ></div>
+
+		</div>
+
+		<script src="bower_components/jquery/dist/jquery.js"></script>
+		<script src="bower_components/bootstrap/dist/js/bootstrap.js"></script>
+    	<script src="bower_components/angularjs/angular.js"></script>	
+    	<script src="bower_components/angular-route/angular-route.js"></script>
+    	<script src="javascripts/route.js"></script>
 	</body>
 
 </html>
