@@ -12,3 +12,70 @@
 	padding: 20px 15px;
 	margin-bottom: 20px;
 }
+
+#messages ul {
+	list-style-type:none;
+	padding: 0px 40px;
+}
+
+#messages ul li {
+	position: relative;
+	padding-left: 80px;
+	padding-right: 80px;
+	margin-bottom: 10px;
+	margin-top: 10px;
+}
+
+#messages .user {
+	position: absolute;
+	top: 0px;
+	left: 0px;
+	width: 60px;
+	height: 60px;
+}
+#messages .user img {
+	width: 60px;
+	height: 60px;
+	border-radius: 30px;
+}
+
+#messages .name {
+	font-family: 'Roboto', sans-serif;
+	font-size: 1.2em;
+	font-weight: bold;
+}
+
+#messages .operations {
+	position: absolute;
+	top: 3px;
+	right: 80px;
+	cursor: pointer;
+}
+
+#messages .operation-left {
+	border: 1px solid #ddd;
+	border-top-left-radius: 3px;
+	border-bottom-left-radius: 3px;
+	margin-right: -5px;
+	padding: 2px;
+}
+#messages .operation-left:hover {
+	background-color: #ddd;
+}
+#messages .operation-right {
+	border: 1px solid #ddd;
+	border-top-right-radius: 3px;
+	border-bottom-right-radius: 3px;
+	margin: 0px;
+	padding: 2px;
+}
+#messages .operation-right:hover {
+	background-color: #ddd;
+}
+
+
+
+
+
+
+

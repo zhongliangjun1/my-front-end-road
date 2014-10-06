@@ -54,8 +54,10 @@ routeApp.controller('profileController', function($scope, $location) {
 	resetNavTabsActive($scope.navTabs, $location.path());
 });
 
-routeApp.controller('messagesController', function($scope, $location) {
-	$scope.message = 'This is messages page and my Controller is messagesController';
+routeApp.controller('messagesController', function($scope, $location, $http) {
+	$http.get('/routeDemo/loadMessages').success(function(data) {
+	    $scope.messages = data;
+	});
 	resetNavTabsActive($scope.navTabs, $location.path());
 });
 

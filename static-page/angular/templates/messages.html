@@ -1,5 +1,33 @@
 
-<div ng-controller="messagesController" >
-	<h1>Messages Page</h1>
-	<p>{{ message }}</p>
+<div id="messages" ng-controller="messagesController" >
+	<!-- <h1>Messages Page</h1>
+	<p>{{ message }}</p> -->
+	<ul>
+		<!-- <li>
+			<a href="javascript:void(0);" class="user" >
+				<img src="./images/image_1.jpg" >
+			</a>
+			<div class="message">
+				<div class="name">liangjun.zhong</div>
+				<div>AngularJS is one of the most popular Javascript frameworks available today. One of AngularJS's goals is to simplify the development process which makes it great for prototyping small apps, but its power allows scaling to full featured client side applications. </div>
+			</div>
+			<div class="operations">
+				<span class="operation-left glyphicon glyphicon-star-empty"></span>
+				<span class="operation-right glyphicon glyphicon-remove"></span>
+			</div>
+		</li> -->
+		<li ng-repeat="message in messages" >
+			<a href="javascript:void(0);" class="user" >
+				<img ng-src="{{message.img}}" >
+			</a>
+			<div class="message">
+				<div class="name">{{message.name}}</div>
+				<div>{{message.msg}}</div>
+			</div>
+			<div class="operations">
+				<span class="operation-left glyphicon glyphicon-star-empty"></span>
+				<span class="operation-right glyphicon glyphicon-remove"></span>
+			</div>
+		</li>
+	</ul>
 </div>
