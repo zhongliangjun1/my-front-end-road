@@ -1,0 +1,19 @@
+
+<html>
+	<head>
+		<title></title>	
+	</head>
+	<body>
+		<a id="click" href="http://www.dianping.com/">click me</a>
+
+		<script src="bower_components/jquery/dist/jquery.js"></script>
+		<script type="text/javascript">
+			$(function(){
+				$('#click').on('click', function(e){
+					console.log('click');
+					e.preventDefault();
+				});
+			});
+		</script>
+	</body>
+</html>

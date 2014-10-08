@@ -1,8 +1,7 @@
 
 // create the module and name it routeApp
 // also include ngRoute for all our routing needs
-var routeApp = angular.module('routeApp', ['ngRoute']);
-
+var routeApp = angular.module('routeApp', ['ngRoute', 'routeServices']);
 
 routeApp.run( function($rootScope, $location) {
 	$rootScope.location = $location;
@@ -54,9 +53,21 @@ routeApp.controller('profileController', function($scope, $location) {
 	resetNavTabsActive($scope.navTabs, $location.path());
 });
 
-routeApp.controller('messagesController', function($scope, $location, $http) {
-	$http.get('/routeDemo/loadMessages').success(function(data) {
-	    $scope.messages = data;
+/** use origin $http
+	routeApp.controller('messagesController', function($scope, $location, $http) {
+		$http.get('/routeDemo/loadMessages').success(function(data) {
+		    $scope.messages = data;
+		});
+		resetNavTabsActive($scope.navTabs, $location.path());
+	});
+*/
+
+routeApp.controller('messagesController', function($scope, $location, messageService) {
+	// ① var entries = messageService.get(function(){   
+	// Error in resource configuration. Expected response to contain an object but got an array
+    var entries = messageService.query(function(){ 
+		$scope.messages = entries;
+		// ② messageService.save(entries); POST http://localhost:3000/routeDemo/loadMessages 404 (Not Found) 
 	});
 	resetNavTabsActive($scope.navTabs, $location.path());
 });
