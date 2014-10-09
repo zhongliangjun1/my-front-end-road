@@ -1,19 +1,22 @@
 
 <html>
 	<head>
-		<title></title>	
+		<title>the-difference-between-event-stoppropagation-and-event-preventdefault</title>	
+		<link rel="stylesheet" href="stylesheets/clickstop.css">
 	</head>
 	<body>
-		<a id="click" href="http://www.dianping.com/">click me</a>
+
+		<div id="container-prevent">
+			<a id="click-prevent" href="http://www.dianping.com/">preventDefault</a>
+		</div>
+		<div id="desc-prevent">preventDefault : prevents the default action the browser makes on that event.</div>	
+
+		<div id="container-stop">
+			<a id="click-stop" href="javascript:void(0);">stopPropagation</a>
+		</div>	
+		<div id="desc-stop">stopPropagation : stops the event from bubbling up the event chain.</div>		
 
 		<script src="bower_components/jquery/dist/jquery.js"></script>
-		<script type="text/javascript">
-			$(function(){
-				$('#click').on('click', function(e){
-					console.log('click');
-					e.preventDefault();
-				});
-			});
-		</script>
+		<script src="javascripts/clickstop.js"></script>
 	</body>
 </html>

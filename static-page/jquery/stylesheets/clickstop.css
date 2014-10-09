@@ -1,0 +1,52 @@
+
+#container-prevent {
+	width: 198px;
+	height: 198px;
+	text-align: center;
+	position: relative;
+	border: 1px solid #cdbfe3;
+	margin-top: 20px;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+#click-prevent {
+	position: absolute;
+	line-height: 20px;
+	top: 89px;
+	left: 51px;
+}
+
+#desc-prevent {
+	width: 500px;
+	margin-top: 5px;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+#container-stop {
+	width: 198px;
+	height: 198px;
+	text-align: center;
+	position: relative;
+	border: 1px solid #cdbfe3;
+	margin-top: 30px;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+#click-stop {
+	position: absolute;
+	line-height: 20px;
+	top: 89px;
+	left: 51px;
+}
+
+#desc-stop {
+	width: 500px;
+	margin-top: 5px;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+
