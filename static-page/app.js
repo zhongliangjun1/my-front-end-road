@@ -7,7 +7,8 @@ var express = require('express')
   , http = require('http')
   , path = require('path')
   , httpDemo = require('./angular/server/httpDemo')
-  , routeDemo = require('./angular/server/routeDemo');
+  , routeDemo = require('./angular/server/routeDemo')
+  , windowDemo = require('./js/windowServer');
 
 var app = express();
 
@@ -35,6 +36,9 @@ app.get('/routeDemo/home.html', routeDemo.home);
 app.get('/routeDemo/profile.html', routeDemo.profiles);
 app.get('/routeDemo/messages.html', routeDemo.messages);
 app.get('/routeDemo/loadMessages', routeDemo.loadMessages);
+
+app.get('/window/open', windowDemo.open);
+app.get('/window/close', windowDemo.close);
 
 http.createServer(app).listen(app.get('port'), function(){
   console.log("Express server listening on port " + app.get('port'));

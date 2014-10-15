@@ -1,0 +1,19 @@
+<html>
+<head>
+	<title>how-to-close-current-tab-in-a-browser-window</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	<script type="text/javascript">
+		function open_win() {
+			window.open("/window/close","_blank","left=500, top=200, width=400, height=400");
+			var node = document.getElementById('clicked');
+			node.innerHTML = 'clicked!';
+		}
+	</script>
+</head>
+<body>
+
+<input type=button value="Open Window" onclick="open_win()" />
+<div id="clicked"></div>
+
+</body>
+</html>
