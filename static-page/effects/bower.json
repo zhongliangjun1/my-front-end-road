@@ -1,0 +1,23 @@
+{
+  "name": "effects",
+  "version": "0.0.0",
+  "homepage": "https://github.com/zhongliangjun1/my-front-end-road",
+  "authors": [
+    "liangjun.zhong <zhongliangjun1@gmail.com>"
+  ],
+  "description": "special effects",
+  "keywords": [
+    "effects"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "jquery": "~2.1.1"
+  }
+}

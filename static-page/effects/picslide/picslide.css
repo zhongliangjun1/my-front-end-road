@@ -1,0 +1,115 @@
+body {
+	margin: 0px;
+	padding: 0px;
+}
+
+.container {
+	margin-top: 20px;
+	margin-left: auto;
+	margin-right: auto;
+	width: 800px;
+	min-height: 500px;
+}
+
+#main {
+	position: relative;
+	margin-left: auto;
+	margin-right: auto;
+	width: 750px;
+	height: 380px;
+}
+
+.big-pic {
+	position: absolute;
+	top: 0px;
+	left: 0px;
+	opacity: 0;	
+	transition: all 0.45s ease-out;
+}
+
+.pic-show {
+	opacity: 1;
+}
+
+.desc {
+	position: absolute;
+	bottom: 80px;
+	right: 0;
+	color: #fff;
+	background: #000;
+	opacity: 0.7;
+	padding: 5px 30px 5px 20px;
+	font-size: 22px;
+	text-decoration: none;
+	transition: all 0.45s ease-out;
+}
+.desc-stand {
+	opacity: 1;
+}
+
+
+.slide-btn {
+	position: absolute;
+	bottom: 0;
+	width: 31px;
+	height: 28px;
+	text-align: center;	
+	font: 0.85em/1.85em 'Arial', Helvetica, Arial, sans-serif;
+	line-height: 28px;
+	/*vertical-align: middle;*/
+	background: #000;
+	opacity: 0.6;
+	color: #fff;
+	cursor: pointer;
+}
+.slide-btn:hover {
+	opacity: 1;
+}
+#left-btn {
+	left: 0px;
+}
+#right-btn {
+	right: 0px;
+}
+
+
+#switch {
+	margin-top: 10px;
+	margin-left: auto;
+	margin-right: auto;
+	padding: 0px;
+	width: 750px;
+	height: 380px;
+	font-size: 0px; // 修复行内元素之间的“换行符”产生间距
+}
+
+.tab {
+	cursor: pointer;
+	margin: 0px 18px 0px 0px;
+	padding: 0px;
+}
+
+.tab-last {
+	margin: 0px;
+}
+
+.tab-pic {
+	width: 110px;
+	height: 70px;
+	margin: 0px;
+	transition: all 0.18s ease-out;
+}
+
+.tab-pic-selector {
+	opacity: 0.3;
+}
+
+
+
+
+
+
+
+
+
+
