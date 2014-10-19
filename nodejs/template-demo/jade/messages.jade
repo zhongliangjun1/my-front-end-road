@@ -1,0 +1,23 @@
+html
+	head
+		title=title
+		meta(http-equiv="Content-Type" content="text/html; charset=UTF-8")
+		link(rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.css")
+		link(rel="stylesheet" href="messages.css")
+	body
+		div#messages
+			ul
+				each message, index in messages
+					li
+						a.user(href="javascript:void(0);")
+							img(src=message.img)
+						div.message
+							div.name=message.name
+								if message.sex === 'male'
+									span=' 男'
+								else
+									span=' 女'
+							div=message.msg
+						div.operations
+							span.operation-left.glyphicon.glyphicon-star-empty
+							span.operation-right.glyphicon.glyphicon-remove
