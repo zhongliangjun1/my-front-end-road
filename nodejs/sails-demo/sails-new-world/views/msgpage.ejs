@@ -1,0 +1,35 @@
+<html>
+	<head>
+		<title><%=title  %> </title>
+		<link rel="stylesheet" href="linker/bower_components/bootstrap/dist/css/bootstrap.css">
+		<link rel="stylesheet" type="text/css" href="msg.css">
+	</head>
+
+	<body>
+		<div id="messages">
+			<ul>
+				<% if (messages) {
+						for (var i = 0; i < messages.length; i++) {
+							var message = messages[i]; 
+				%>
+				<li>
+					<a href="javascript:void(0);" class="user" >
+						<img src="images/<%= message.img %>" >
+					</a>
+					<div class="message">
+						<div class="name"><%= message.name %></div>
+						<div><%= message.msg %></div>
+					</div>
+					<div class="operations">
+						<span class="operation-left glyphicon glyphicon-star-empty"></span>
+						<span class="operation-right glyphicon glyphicon-remove"></span>
+					</div>
+				</li>
+				<% 
+						}; 
+					};  
+				%>
+			</ul>
+		</div>		
+	</body>
+</html>
