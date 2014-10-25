@@ -34,6 +34,15 @@ module.exports.routes = {
 
   '/': {
     view: 'homepage'
+  },
+
+  '/msg': {
+    controller: 'MsgController',
+    action: 'load'
+  },
+  '/add': {
+    controller: 'MsgController',
+    action: 'add'
   }
 
   /***************************************************************************
